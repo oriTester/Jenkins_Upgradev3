@@ -13,4 +13,8 @@ pipeline{
             }
         }
     }
+
+    stage('Deploy in staging enviroment'){
+        build job: 'Deploy_app'
+    }
 }
