@@ -11,11 +11,9 @@ pipeline{
                     archiveArtifacts artifacts: '**/*.jar'
                 }
             }
-        }
         stage('Deploy in staging enviroment'){
-             build job: 'Deploy_app'
-             }
+            build job: 'Deploy_app'
+            }
+        }
     }
-
-
 }
