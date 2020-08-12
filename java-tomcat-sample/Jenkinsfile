@@ -1,12 +1,12 @@
-pipeline{
+pipeline {
     agent any
-    stages{
+    stages {
         stage('Build Application'){
-            steps{
+            steps {
                 sh 'mvn -f java-tomcat-sample/pom.xml clean package'
             }
-            post{
-                success{
+            post {
+                success {
                     echo "Now Archiving the Artivacts...."
                     archiveArtifacts artifacts: '**/*.jar'
                 }
